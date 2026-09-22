@@ -28,10 +28,10 @@ func Menumarchand(c *Character) {
 	}
 }
 
-func acheterobject() {
+func acheterobject() int {
 	fmt.Println("list des items disponibles à l'achat :")
-	fmt.Printf("1. %v\n2. %v\n3. %v\n4. %v\n5. %v\n", itemDft1.Name, itemDft2.Name, itemDft3.Name, itemDft4.Name, itemDft5.Name)
+	fmt.Printf("1. %v\n2. %v\n3. %v\n4. %v\n5. %v\n6. %v\n", itemDft1.Name, itemDft2.Name, itemDft3.Name, itemDft4.Name, itemDft5.Name, itemDft6.Name)
 	var choix int
 	fmt.Scanf("%d", &choix)
-
+	return choix
 }

@@ -7,6 +7,7 @@ var itemDft2 = Item{ID: 2, Name: "Sword", description: "A sharp blade", Quantity
 var itemDft3 = Item{ID: 3, Name: "Shield", description: "Protects from attacks", Quantity: 1}
 var itemDft4 = Item{ID: 4, Name: "Helmet", description: "Protects the head", Quantity: 1}
 var itemDft5 = Item{ID: 5, Name: "superBoots", description: "Increases speed", Quantity: 1}
+var itemDft6 = Item{ID: 6, Name: "Potion de poison", description: "Poisons the target and reduces 10x of their current HP", Quantity: 1}
 
 func DisplayInventory(c *Character) {
 	fmt.Println("Inventory:")

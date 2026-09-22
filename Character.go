@@ -80,3 +80,14 @@ func displayInfo(c *Character) {
 		fmt.Printf(" : %s  Quantity: %d\n", item.Name, item.Quantity)
 	}
 }
+
+// tache Wasted
+func isDead(c *Character) bool {
+
+	if c.CurrentHP <= 0 {
+		c.CurrentHP = c.MaxHP / 2
+		fmt.Println("You are dead ! we have restored your HP to half of your max HP.")
+		return true
+	}
+	return false
+}
