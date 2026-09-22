@@ -36,7 +36,7 @@ func askclass() (string, int) {
 	fmt.Println("1. alien (100 PV)")
 	fmt.Println("2. humain (80 PV)")
 	fmt.Println("3. reptile (120 PV)")
-	fmt.Print("Votre choix : ")
+	fmt.Println("Votre choix :")
 	fmt.Scanln(&choix)
 	if choix == 1 {
 		return "alien", 100
@@ -44,24 +44,24 @@ func askclass() (string, int) {
 		return "humain", 80
 	} else if choix == 3 {
 		return "reptile", 120
+	} else {
+		fmt.Println("Choix invalide, reessayez")
 	}
-	fmt.Println("Choix invalide, reessayez")
 	return askclass()
 }
+
 func createCharacter() *Character {
 	class, maxHP := askclass()
 	name := askname()
-	itemDft := Item{ID: 1, Name: "Potion", description: "Restores 50 HP", Quantity: 1}
-	itemDft2 := Item{ID: 2, Name: "Sword", description: "A sharp blade", Quantity: 1}
-	itemDft3 := Item{ID: 3, Name: "Shield", description: "Protects from attacks", Quantity: 1}
-	c := initCharacter(name, class, maxHP, []Item{itemDft, itemDft2, itemDft3})
+
+	c := initCharacter(name, class, maxHP, []Item{itemDft1, itemDft2, itemDft3})
 	return c
 
 }
 
 func askname() string {
 	var name string
-	fmt.Print("Enter your character's name: ")
+	fmt.Println("Enter your character's name:")
 	fmt.Scanln(&name)
 	return name
 }
