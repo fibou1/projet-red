@@ -16,6 +16,7 @@ type Character struct {
 	MaxHP     int
 	CurrentHP int
 	Inventory []Item
+	MaxSlots  int
 }
 
 func initCharacter(name string, class string, maxHP int, inventory []Item) *Character {
@@ -26,6 +27,7 @@ func initCharacter(name string, class string, maxHP int, inventory []Item) *Char
 		MaxHP:     maxHP,
 		CurrentHP: maxHP / 2,
 		Inventory: inventory,
+		MaxSlots:  10,
 	}
 	return c
 }

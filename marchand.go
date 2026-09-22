@@ -2,8 +2,6 @@ package main
 
 import "fmt"
 
-var shopItems = []Item{itemDft4, itemDft5}
-
 func Menumarchand(c *Character) {
 	fmt.Println("************Welcome to the Merchant!************")
 	fmt.Println("1. Acheter un objet")
@@ -31,8 +29,9 @@ func Menumarchand(c *Character) {
 }
 
 func acheterobject() {
-	for i, item := range shopItems {
-		fmt.Println(i+1, "-", item.Name, ":", item.description)
-	}
+	fmt.Println("list des items disponibles à l'achat :")
+	fmt.Printf("1. %v\n2. %v\n3. %v\n4. %v\n5. %v\n", itemDft1.Name, itemDft2.Name, itemDft3.Name, itemDft4.Name, itemDft5.Name)
+	var choix int
+	fmt.Scanf("%d", &choix)
 
 }
