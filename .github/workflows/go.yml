@@ -20,4 +20,4 @@ jobs:
           go-version-file: go.mod
 
       - name: Check go run
-        run: printf '1\nNova\n' | go run .
+        run: printf '1\nNova\n6\n' | go run .
