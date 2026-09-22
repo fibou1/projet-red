@@ -17,9 +17,11 @@ type Character struct {
 	CurrentHP int
 	Inventory []Item
 	MaxSlots  int
+	Skills    []string
+	coin      int
 }
 
-func initCharacter(name string, class string, maxHP int, inventory []Item) *Character {
+func initCharacter(name string, class string, maxHP int, inventory []Item, skills []string) *Character {
 	c := &Character{
 		Name:      name,
 		Class:     class,
@@ -28,6 +30,8 @@ func initCharacter(name string, class string, maxHP int, inventory []Item) *Char
 		CurrentHP: maxHP / 2,
 		Inventory: inventory,
 		MaxSlots:  10,
+		Skills:    skills,
+		coin:      100, // tache 13
 	}
 	return c
 }
@@ -56,7 +60,7 @@ func createCharacter() *Character {
 	class, maxHP := askclass()
 	name := askname()
 
-	c := initCharacter(name, class, maxHP, []Item{itemDft1, itemDft2, itemDft3})
+	c := initCharacter(name, class, maxHP, []Item{itemDft1, itemDft2, itemDft3}, []string{"coup de poing"})
 	return c
 
 }
