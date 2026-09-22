@@ -5,8 +5,9 @@ import "fmt"
 type Item struct {
 	ID          int
 	Name        string
-	description string
+	Description string
 	Quantity    int
+	Coinprix    int
 }
 
 type Character struct {
