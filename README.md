@@ -37,6 +37,12 @@ cd projet-red
 ```bash
 go run .
 ```
+avec docker 
+
+```bash
+docker build -t projet-red .
+docker run -it projet-red
+```
 
 Le jeu demande successivement une classe, un nom, puis une action dans le menu.
 
