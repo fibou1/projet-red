@@ -50,7 +50,7 @@ func takePot(c *Character) {
 				} else {
 					c.CurrentHP += 50
 					c.Inventory[i].Quantity -= 1
-					fmt.Println("Your HP is now +50  ! you have used a potion.")
+					fmt.Println("Yourr HP is now +50  ! you have used a potion.")
 					fmt.Printf(" Your current HP is now: %d/%d\n", c.CurrentHP, c.MaxHP)
 					return
 				}
